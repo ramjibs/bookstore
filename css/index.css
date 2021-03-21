@@ -1,0 +1,317 @@
+.overview-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+}
+.overview-control{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
+}
+.overview-control label{
+    margin-right: .6rem;
+}
+.publish-date, .select-genre{
+    margin-right: 1.6rem;
+}
+.select-genre{
+    border-width: 1.5px;
+    height: 2.7rem;
+}
+.overview-content{
+    display: flex;
+    flex-direction: column;
+}
+.overview-books{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem , 1fr));;
+    row-gap: 3rem;
+}
+
+.similar-container{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    overflow: auto;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.custom-card{
+    display: block;
+    width: 25rem;
+    height: 35rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+}
+
+.custom-card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.book-img{
+    width: 100%;
+    height: 100%;
+}
+
+.genre-name{
+    padding: 1rem;
+    margin-bottom: .5rem;
+    position: sticky;
+    top: 4.5rem;
+    background-color: whitesmoke;
+    
+}
+
+.bg-img{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    max-width: 100%;
+}
+.search-container{
+    background-image: url('../asset/bgimg.jpg');
+    width: 100%;
+    height: 70vh;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.app-header{
+    color: #ffffff;
+    font: 500 6rem/6.4rem "nyt-cheltenham", "georgia", "times new roman", times, serif;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+    
+}
+
+.search-bar{
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+.search-bar select{
+    height: 100%;
+    border-radius:  15px 0 0 15px;
+    border: none;
+    padding: 15px;
+
+
+
+}
+.search-bar input{
+    height: 100%;
+    border: 0;
+    outline: none;
+    font-size: 2rem;
+    padding: 15px;
+
+}
+.search-bar button{
+    height: 100%;
+    background-color: teal;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0 15px 15px 0;
+    padding: 15px;
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.search-bar button:hover{
+    background-color: rgb(5, 110, 110);
+    
+}
+
+.backdrop{
+    height: 100vh;
+    width: 100%;
+    position:fixed;
+    top:0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0,0,0,.2);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container{
+    width: 100%;
+    margin: 10rem;
+    height: 90%;
+    opacity: 1;
+    background-color: rgb(184, 176, 176);
+    background-color: whitesmoke;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 2rem;
+
+}
+
+.book-content{
+    background-color: white;
+    grid-row:  1/ 8;
+    grid-column: 1/7;
+    padding: 10px;
+    position: relative;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.review-content{
+    background-color: white;
+    grid-row:  8/13;
+    grid-column: 1/7;
+    padding: 10px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+.similar-content{
+    background-color: white;
+    grid-row: 1/13;
+    grid-column: 7/13;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    position: relative;
+   
+
+}
+
+
+.review-container{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2rem;
+    height: 150px;
+}
+  .book-container{
+      display:flex;
+      flex-direction: row;
+      margin-top: .5rem;
+      overflow-y: hidden;
+      overflow-x: hidden;
+  }
+
+  .book-details{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 35rem;
+    padding: 2rem;
+    padding-bottom: 0;
+
+  }
+
+.book-details::-webkit-scrollbar, .review-container::-webkit-scrollbar,.similar-content::-webkit-scrollbar{
+    width: .7rem;
+}
+
+/* Track */
+.book-details::-webkit-scrollbar, .review-container::-webkit-scrollbar,.similar-content::-webkit-scrollbar {
+    box-shadow: inset 0 0 5px white; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(88, 87, 87); 
+  }
+
+  .poped-book{
+    display: block;
+    width: 25rem;
+    height: 32rem;
+  }
+
+  .book-details label, .review-container label{
+      color: grey;
+      margin-bottom: 0.5rem;
+  }
+
+  .book-details h6 ,.book-details p{
+   
+    margin-bottom: 1rem;
+}
+
+.buy-links{
+    display: block;
+}
+
+.buy-links a{
+    display: inline-block;
+    margin: .5rem .5rem;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+}
+.review-container a{
+    display: inline-block;
+    margin: .25rem 0 2rem;
+    /* text-decoration: none; */
+    color: black;
+}
+
+.buy-links a:hover{
+    background-color: rgb(41, 233, 233);
+    cursor: pointer;
+}
+
+.default-review{
+   
+    align-self: center;
+    justify-self: center;
+    color: grey;
+    font-size: 2rem;
+}
+
+.summary{
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.similar-control{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    /* z-index: 100; */
+    width: 98%;
+    background-color: white;
+    
+}
+
+.similar-control button{
+    outline: none;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    
+}

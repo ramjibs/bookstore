@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Book Store</title>
+</head>
+
+<body>
+    <div id="popup" class="backdrop">
+        <div class="modal-container">
+            <div id="book-content" class="book-content">
+                <h6>Book Details</h6>
+                <div class="book-container">
+                    <div id="popedbook" class="poped-book">
+                        <img class="book-img" data-book="book" id="popedimg">
+                    </div>
+                    <div class="book-details">
+                        <label>Title</label>
+                        <h6 id="title" ></h6>
+                        <label>Author</label>
+                        <h6 id="author"></h6>
+                        <label>Contributor</label>
+                        <h6 id="contributor" ></h6> 
+                        <label>Publisher</label>
+                        <h6 id="publisher"></h6>
+                        <label>Description</label>
+                        <p id="description"></p>
+                        <label>Buy Links</label>
+                        <div id="buylinks" class="buy-links"></div>
+                    </div>
+                </div>
+            </div>
+            <div  id ="similar-content"class="similar-content">
+                <div class="similar-control"> 
+                    <h6>Similar Books</h6>
+                    <button id="hidePopUp"> X </button>
+                </div>
+                <div class="similar-container" id="similar-container"></div>
+                
+            </div>
+            <div id ="review-content" class="review-content">
+                <h6>Book Reviews</h6>
+                <div class="review-container" id="review-container">
+                    <p id="default-review"  class="default-review"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-container" id="search-container">
+        <h1 class="app-header">New York Times Book Store </h1>
+        <div class="search-bar">
+            <select id="search-type">
+                <option selected value="bestselling" disabled>Choose any</option>
+                <option value="author"> Author</option>
+                <option value="title">Book Title</option>
+                <option value="publisher">Publisher</option>
+            </select>
+            <input class="search-bar" id="search-bar" type="text" />
+            <button>Try my luck</button>
+        </div>
+    </div>
+    <div id="overview-container" class="overview-container">
+        <div class="overview-control">
+            <label>Genres</label>
+            <select name="genres" id="genres" class="select-genre">
+            </select>
+            <label>Closest Publish from</label>
+            <input type="date" id="publish_date" class="publish-date" />
+        </div>
+    </div>
+
+    <script src="js/index.js" type="module" defer></script>
+</body>
+
+</html>
